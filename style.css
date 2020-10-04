@@ -13,6 +13,13 @@ body {
     position: absolute !important;
     display: none;
   }
+  .instructions{
+    position: absolute;
+    top: 10px;
+    font-family: sans-serif;
+    color: #444;
+  }
+
   .container-block {
     display: flex;
     width: 100%;
@@ -28,6 +35,8 @@ body {
     flex-direction: column;
     position: absolute;
     bottom: 0;
+    font-family: sans-serif;
+
   }
   .result-container > div {
     font-size: 1.3rem;
@@ -36,7 +45,6 @@ body {
     margin: 5px 0;
     color: white;
     text-transform: capitalize;
-    font-family: sans-serif;
   }
 
   #emotion {
@@ -86,4 +94,16 @@ header img{
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+  }
+
+
+  @media (max-width: 767px) {
+    .instructions{
+      position: absolute;
+      top: 15%;
+      font-family: sans-serif;
+      color: gainsboro;
+      text-align: center;
+    }
+  
   }

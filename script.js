@@ -1,5 +1,6 @@
 const video = document.getElementById("video");
 const isScreenSmall = window.matchMedia("(max-width: 700px)");
+const loader = document.getElementById('loader');
 let predictedAges = [];
 
 Promise.all([
@@ -33,7 +34,7 @@ video.addEventListener("playing", () => {
   const canvas = faceapi.createCanvasFromMedia(video);
   let container = document.querySelector(".container");
   container.append(canvas);
-
+  loader.remove();
   const displaySize = { width: video.width, height: video.height };
   faceapi.matchDimensions(canvas, displaySize);
 
